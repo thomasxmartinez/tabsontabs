@@ -97,3 +97,29 @@ function quickSort(array) {
 }
 
 console.log(quickSort([9, 8, 7, 10, 5, 6, 3, 2, 1, 4]), '1,2,3,4,4,6,7,8,9,10');
+
+function map(string) {
+  var array = [];
+  var count = 0;
+  var obj = {};
+  for (var i = 0; i < string.length; i++) {
+    obj[string[i]] = //somethinghere;
+  }
+  return obj;
+}
+
+console.log(map('lickyy'));
+
+function isUnique(string) {
+  var chars = {};
+  for (var i = 0; i < string.length; i++) {
+    console.log(chars);
+    if (chars[string[i]]) {
+      return false;
+    }
+    chars[string[i]] = true;
+  }
+  return true;
+}
+
+console.log(isUnique('lickyy'));

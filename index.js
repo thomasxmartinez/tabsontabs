@@ -75,4 +75,25 @@ function findMedian(arr1, arr2) {
   return Math.floor(wholeArray[wholeArray.length / 2]);
 }
 
-console.log(findMedian([1, 2, 3, 4, 5], [1, 7, 8, 9, 10]), 'median should be ');
+console.log(findMedian([1, 2, 3, 4, 5], [1, 7, 8, 9, 10]), 'median should be 5');
+
+function quickSort(array) {
+  var newArray = [];
+  if (array.length <= 1) {
+    return array;
+  }
+  var pivot = array[array.length - 1];
+  var right = [];
+  var left = [];
+  for (var i = 0; i < array.length - 1; i++) {
+    if (pivot < array[i]) {
+      right.push(array[i]);
+    } else {
+      left.push(array[i]);
+    }
+  }
+
+  return newArray.concat(quickSort(left), pivot, quickSort(right));
+}
+
+console.log(quickSort([9, 8, 7, 10, 5, 6, 3, 2, 1, 4]), '1,2,3,4,4,6,7,8,9,10');

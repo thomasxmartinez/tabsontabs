@@ -113,7 +113,6 @@ console.log(map('lickyy'));
 function isUnique(string) {
   var chars = {};
   for (var i = 0; i < string.length; i++) {
-    console.log(chars);
     if (chars[string[i]]) {
       return false;
     }

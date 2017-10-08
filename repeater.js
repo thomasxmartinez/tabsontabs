@@ -1,19 +1,28 @@
-function quickSort(array) {
-  var newArr = [];
-  if (array.length <= 1) {
-    return array;
+class Tree {
+  constructor() {
+    this.root = null;
   }
-  var pivot = array[array.length - 1];
-  var left = [];
-  var right = [];
-
-  for (var i = 0; i < array.length - 1; i++) {
-    if (array[i] < pivot) {
-      left.push(array[i]);
-    } else {
-      right.push(array[i]);
-    }
-  }
-  return newArr.concat(quickSort(left), pivot, quickSort(right));
 }
-console.log(quickSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]), '[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]');
+
+class Node {
+  constructor(value, left = null, right = null) {
+    this.value = value;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function isUnique(string) {
+  if (string < 2) {
+    return string;
+  }
+  var chars = {};
+  for (var i = 0; i < string.length; i++) {
+    if (chars[string[i]]) {
+      return false;
+    }
+    chars[string[i]] = true;
+  }
+  return true;
+}
+console.log(isUnique('brickshithouse'));

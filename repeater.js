@@ -26,3 +26,29 @@ function isUnique(string) {
   return true;
 }
 console.log(isUnique('brickshithouse'));
+
+function myMap(array, func) {
+  const answer = [];
+  for (var i = 0; i < array.length; i++) {
+    answer.push(func(array[i]));
+  }
+  return answer;
+}
+
+function myReduce(array, func, seed) {
+  let answer = seed;
+  for (var i = 0; i < array.length; i++) {
+    answer = func(answer, array[i]);
+  }
+  return answer;
+}
+
+function myFilter(array, func) {
+  var answer = [];
+  for (var i = 0; i < array.length; i++) {
+    if (func(array[i])) {
+      answer.push(array[i]);
+    }
+  }
+  return answer;
+}

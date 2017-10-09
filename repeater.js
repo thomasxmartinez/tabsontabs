@@ -25,7 +25,6 @@ function isUnique(string) {
   }
   return true;
 }
-console.log(isUnique('brickshithouse'));
 
 function myMap(array, func) {
   const answer = [];
@@ -52,3 +51,24 @@ function myFilter(array, func) {
   }
   return answer;
 }
+
+function squareOrSquareRoot(array) {
+  var answer = [];
+  for (var i = 0; i < array.length; i++) {
+    if (Math.sqrt(array[i]) === Math.floor(Math.sqrt(array[i]))) {
+      answer.push(Math.sqrt(array[i]));
+    } else {
+      answer.push(array[i] * array[i]);
+    }
+  }
+  return answer;
+}
+
+function countBy(x, n) {
+  var z = [];
+  for (i = 1; i <= n; i++) {
+    z.push(x * i);
+  }
+  return z;
+}
+console.log(countBy(1, 5));

@@ -122,3 +122,16 @@ function isUnique(string) {
 }
 
 console.log(isUnique('lickyy'));
+
+function squareOrSquareRoot(array){
+  var answer [];
+  for(var i = 0; i < array.length; i++){
+    if(Math.sqrt(array[i])){
+      answer.push(Math.sqrt(array[i]));
+    }
+    answer.push(array[i]*array[i]);
+  }
+  return answer;
+}
+
+console.log(squareOrSquareRoot([ 4, 3, 9, 7, 2, 1 ]))

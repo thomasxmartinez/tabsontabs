@@ -201,3 +201,33 @@ function filter_list(l) {
   }
   return onlyInts;
 }
+
+function validatePIN(pin) {
+  if (pin.length !== 4 && pin.length !== 6) {
+    return false;
+  }
+  for (var i = 0; i < pin.length; i++) {
+    if (pin[i] > '9' || pin[i] < '0') {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(validatePIN('000000'));
+console.log('123456'.length);
+
+function printerError(s) {
+  var len = s.length;
+  var count = 0;
+  var charArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'];
+  var charObj = {};
+  for (var j = 0; j < charArr.length; j++) {
+    charObj[charArr[j]] = true;
+  }
+  for (var i = 0; i < s.length; i++) {
+    if (!charObj[s[i]]) {
+      count++;
+    }
+  }
+  return `${count}/${len}`;
+}

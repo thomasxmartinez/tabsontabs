@@ -213,8 +213,6 @@ function validatePIN(pin) {
   }
   return true;
 }
-console.log(validatePIN('000000'));
-console.log('123456'.length);
 
 function printerError(s) {
   var len = s.length;
@@ -231,3 +229,37 @@ function printerError(s) {
   }
   return `${count}/${len}`;
 }
+
+function spinWords(str) {
+  var splitz = str.split(' ');
+  var newSpin = [];
+  console.log(splitz);
+  for (var i = 0; i < splitz.length; i++) {
+    if (splitz[i].length >= 5) {
+      newSpin.push(
+        splitz[i]
+          .split('')
+          .reverse()
+          .join('')
+      );
+    } else {
+      newSpin.push(splitz[i]);
+    }
+  }
+  return newSpin.join(' ');
+}
+
+function list(names) {
+  var namesArr = [];
+  if (names.length === 1) {
+    return names[0].name;
+  }
+  console.log(names.name);
+  for (var i = 0; i < names.length - 1; i++) {
+    namesArr.push(names[i].name);
+  }
+  var last = names[names.length - 1].name;
+  return namesArr.join(', ') + ' & ' + last;
+}
+
+console.log(list([{ name: 'Bart' }])); //, 'Bart, Lisa & Maggie',

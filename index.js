@@ -103,7 +103,7 @@ function map(string) {
   var count = 0;
   var obj = {};
   for (var i = 0; i < string.length; i++) {
-    obj[string[i]] = //somethinghere;
+    obj[string[i]] = // must be a value to create instance
   }
   return obj;
 }

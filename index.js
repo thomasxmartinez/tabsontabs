@@ -135,3 +135,27 @@ function squareOrSquareRoot(array){
 }
 
 console.log(squareOrSquareRoot([ 4, 3, 9, 7, 2, 1 ]))
+
+function mergeSort(array){
+  if(array.length < 2){
+    return array;
+  }
+  var mid = Math.floor(array.length/2)
+  var left = array.slice(0,mid);
+  var right = array.slice(mid);
+
+  return stitch(mergeSort(left), mergeSort(right))
+}
+
+function stitch(left, right){
+  var newArray = [];
+  while(left.length&&right.length){
+    if(left[0]< right[0]){
+      newArray.push(left.shift())
+    }
+    newArray.push(right.shift())
+  }
+  return newArray.concat(left, right)
+}
+
+console.log(mergeSort([5,6,7,8,9]))

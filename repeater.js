@@ -263,3 +263,8 @@ function list(names) {
 }
 
 console.log(list([{ name: 'Bart' }])); //, 'Bart, Lisa & Maggie',
+
+function nthEven(n) {
+  return 2 * (n - 1);
+}
+console.log(nthEven(14));

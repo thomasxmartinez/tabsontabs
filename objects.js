@@ -7,7 +7,7 @@ var person = {
   },
   interests: {
     athletic: ['football', 'basketball', 'golf'],
-    musical: ['hip-hop', 'trap', 'jazz']
+    musical: ['hip-hop', 'trap', 'new-wave']
   } // notice there is no trailing comma after the last portion of the object
 };
 
@@ -40,3 +40,6 @@ dog.breed = 'golden retriever';
 console.log(dog);
 
 //what will dog.breed return?
+
+//use more comments for clarification
+//presents the usecase ahead of time to make sure it is fresh, opened up audience well. I need to spend more time looking at the audience. Use even simpler terms
